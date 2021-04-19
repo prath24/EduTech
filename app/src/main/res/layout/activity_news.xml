@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsActivity"
+    android:background="#ececec">
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <TextView
+            android:layout_toStartOf="@+id/menu_btn"
+            android:layout_centerVertical="true"
+            android:id="@+id/search_vw"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:transitionName="1"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:drawablePadding="15dp"
+            android:paddingStart="15dp"
+            android:fontFamily="@font/lato"
+            android:drawableStart="@drawable/ic_baseline_search_24"
+            android:hint="Discover update news"
+            android:background="@drawable/home_search_bar"
+            android:textColor="@android:color/black"
+             />
+        <ImageView
+            android:id="@+id/menu_btn"
+            android:background="@drawable/ic_baseline_menu_24"
+            android:layout_marginEnd="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Top stories"
+            android:textColor="@color/black"
+            android:fontFamily="@font/lato_bold"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="8dp"
+           />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tops_news_list"
+            android:layout_below="@id/title1"
+            android:layout_marginStart="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/tops_news_list"
+            android:id="@+id/title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="For You"
+            android:textColor="@color/black"
+            android:fontFamily="@font/lato_bold"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginStart="8dp"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/news_list"
+            android:paddingTop="-5dp"
+            android:layout_below="@id/title2"
+            android:layout_marginStart="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </RelativeLayout>
+
+    <com.luseen.spacenavigation.SpaceNavigationView
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        app:active_item_color="#6903c3"
+        app:centre_button_color="@color/white"
+        app:inactive_item_color="@color/black"
+        app:space_background_color="#fff"
+        app:centre_button_icon="@drawable/ic_baseline_feed_24"
+        app:space_item_icon_size="22dp"
+        app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
+        app:space_item_text_size="@dimen/space_item_text_default_size" />
+
+</RelativeLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".Fragments.ResumeFragment">
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="18sp"
+                    android:id="@+id/title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About me"
+                    android:fontFamily="@font/lato"
+                    android:textColor="#000"/>
+                <EditText
+                    android:gravity="top"
+                    android:textColor="#7e7e7e"
+                    android:textSize="18sp"
+                    android:maxLines="5"
+                    android:fontFamily="@font/lato"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/title1"
+                    android:background="#00000000"
+                    android:minHeight="70dp"
+                    android:text="I am a talented, ambitious and hardworking individual, with broad skills and experience in digital and printed marketing, social media and leading projects. I am a talented, ambitious and hardworking individual, with broad skills and experience in digital and printed marketing, social media and leading projects."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="18sp"
+                    android:id="@+id/title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Skills"
+                    android:fontFamily="@font/lato"
+                    android:textColor="#000"/>
+                <RelativeLayout
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/title2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:id="@+id/skill1"
+                        android:padding="5dp"
+                        android:background="@drawable/skills_border"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Java"/>
+                    <TextView
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/skill1"
+                        android:id="@+id/skill2"
+                        android:padding="5dp"
+                        android:background="@drawable/skills_border"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Android Development"/>
+                    <TextView
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_toEndOf="@id/skill2"
+                        android:id="@+id/skill3"
+                        android:padding="5dp"
+                        android:background="@drawable/skills_border"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Data Science"/>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:layout_below="@id/skill1"
+                        android:id="@+id/skill4"
+                        android:padding="5dp"
+                        android:background="@drawable/skills_border"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Machine Learning"/>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:paddingStart="8dp"
+                        android:layout_toEndOf="@id/skill4"
+                        android:paddingEnd="8dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_below="@id/skill1"
+                        android:id="@+id/skill5"
+                        android:padding="5dp"
+                        android:background="@drawable/skills_border"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cyber Security"/>
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="22dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="18sp"
+                    android:id="@+id/title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:fontFamily="@font/lato"
+                    android:textColor="#000"/>
+
+                <EditText
+                    android:textColor="#7e7e7e"
+                    android:textSize="18sp"
+                    android:maxLines="5"
+                    android:fontFamily="@font/lato"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/title3"
+                    android:background="#00000000"
+                    android:text="androiddeveloper@gmail.com"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="22dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="18sp"
+                    android:id="@+id/title4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact"
+                    android:fontFamily="@font/lato"
+                    android:textColor="#000"/>
+
+                <EditText
+                    android:textColor="#7e7e7e"
+                    android:textSize="18sp"
+                    android:maxLines="5"
+                    android:fontFamily="@font/lato"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/title4"
+                    android:background="#00000000"
+                    android:text="+91 982949328"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

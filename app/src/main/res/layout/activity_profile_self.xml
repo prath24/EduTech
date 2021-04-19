@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileSelfActivity">
+
+    <RelativeLayout
+        android:background="@drawable/background_header"
+        android:id="@+id/top_sec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/ic_baseline_arrow_back_ios_24"
+                android:layout_width="25dp"
+                android:layout_marginStart="15dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_margin="18dp"
+                android:fontFamily="@font/lato"
+                android:textSize="20sp"
+                android:textColor="#FFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_below="@id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="120dp"
+                    android:layout_marginStart="30dp"
+                    android:src="@drawable/demo1"
+                    android:layout_height="120dp"/>
+                <LinearLayout
+                    android:gravity="bottom"
+                    android:paddingBottom="20dp"
+                    android:orientation="vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="10dp"
+                        android:background="#00000000"
+                        android:drawableStart="@drawable/ic_baseline_person_24"
+                        android:drawablePadding="15dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/lato"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:text="Kartik Aryan"
+                        android:textColor="#fff"
+                        android:textColorLink="#00000000"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="5dp"
+                        android:background="#00000000"
+                        android:drawableStart="@drawable/ic_baseline_assistant_24"
+                        android:drawablePadding="15dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/lato"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:text="Android Developer"
+                        android:textColor="#fff"
+                        android:textColorLink="#00000000"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            android:layout_marginTop="40dp"
+            app:tabIndicatorColor="#00000000"
+            app:tabSelectedTextColor="#fff" />
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_below="@id/top_sec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</RelativeLayout>

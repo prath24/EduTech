@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ececec"
+    tools:context=".ChatActivity">
+
+     <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/lato"
+            android:padding="10dp"
+            android:text="Messages"
+            android:textColor="#000"
+            android:textSize="20sp" />
+         <ImageView
+             android:background="@drawable/ic_baseline_search_24"
+             android:layout_marginEnd="15dp"
+             android:layout_alignParentEnd="true"
+             android:layout_centerVertical="true"
+             android:layout_width="25dp"
+             android:layout_height="25dp"
+             />
+     </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/toolbar"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="#ececec"
+        android:layout_above="@id/space"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/message_list"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/chat_bn"
+        app:itemBackground="@color/white"
+        app:itemTextColor="@drawable/nav_text_selector"
+        app:itemIconTint="@drawable/nav_text_selector"
+        app:menu="@menu/menu_navigation"
+        />
+
+    <com.luseen.spacenavigation.SpaceNavigationView
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        app:active_item_color="#6903c3"
+        app:centre_button_color="@color/white"
+        app:inactive_item_color="@color/black"
+        app:space_background_color="#fff"
+        app:centre_button_icon="@drawable/ic_baseline_chat_24"
+        app:space_item_icon_size="22dp"
+        app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
+        app:space_item_text_size="@dimen/space_item_text_default_size" />
+
+</RelativeLayout>
